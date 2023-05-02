@@ -4,6 +4,8 @@
 
 # FaceAttribute-Android
 
+## Introduction
+
 This demo project integrates several facial recognition technologies, including 3D passive face liveness detection, face recognition, automatic face capture, and analysis of various face attributes such as age, gender, face quality, facial occlusion, eye closure, and mouth opening.
 
 The system utilizes Face Liveness Detection technology to generate a real-time liveness score based on a single image captured by the camera. 
