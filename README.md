@@ -30,6 +30,12 @@ Moreover, the demo can compute scores for different face attributes from a galle
   |         |         | Eye Closure Detection |
   |         |         | Age, Gender Estimation |
 
+> - [Face Liveness Detection - Android(Basic SDK)](https://github.com/kby-ai/FaceLivenessDetection-Android)
+> - [Face Liveness Detection - iOS(Basic SDK)](https://github.com/kby-ai/FaceLivenessDetection-iOS)
+> - [Face Recognition - Android(Stdndard SDK)](https://github.com/kby-ai/FaceRecognition-Android)
+> - [Face Recognition - iOS(Stdndard SDK)](https://github.com/kby-ai/FaceRecognition-iOS)
+
+
 
 ## Try the APK
 
@@ -206,11 +212,3 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
   88          88      88  88
   88          88  888888  888888
   ```
-
-# References
-
-- [Face Liveness Detection - Android](https://github.com/kby-ai/FaceLivenessDetection-Android)
-- [Face Liveness Detection - iOS](https://github.com/kby-ai/FaceLivenessDetection-iOS)
-- [Face Recognition - Android](https://github.com/kby-ai/FaceRecognition-Android)
-- [Face Recognition - iOS](https://github.com/kby-ai/FaceRecognition-iOS)
-
