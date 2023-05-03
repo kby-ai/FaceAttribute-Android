@@ -16,6 +16,8 @@ The demo also features an automatic Face Capture function that verifies various 
 
 Moreover, the demo can compute scores for different face attributes from a gallery image, including liveness, face orientation (yaw, roll, pitch), face quality, luminance of the face, facial occlusion, eye closure, mouth opening, age, and gender.
 
+:star: :star: :star: Do not forget to star (Top right of this page) it if you like this repo :star: :star: :star:
+
 > The demo is integrated with KBY-AI's Premimum Face SDK.
 
   | Basic      | Standard | Premimum |
@@ -34,7 +36,6 @@ Moreover, the demo can compute scores for different face attributes from a galle
 > - [Face Liveness Detection - iOS(Basic SDK)](https://github.com/kby-ai/FaceLivenessDetection-iOS)
 > - [Face Recognition - Android(Stdndard SDK)](https://github.com/kby-ai/FaceRecognition-Android)
 > - [Face Recognition - iOS(Stdndard SDK)](https://github.com/kby-ai/FaceRecognition-iOS)
-
 
 
 ## Try the APK
