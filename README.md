@@ -18,9 +18,9 @@ Moreover, the demo can compute scores for different face attributes from a galle
 
 :star: :star: :star: Do not forget to star (Top right of this page) it if you like this repo :star: :star: :star:
 
-> The demo is integrated with KBY-AI's Premimum Face SDK.
+> The demo is integrated with KBY-AI's Premium Face SDK.
 
-  | Basic      | Standard | Premimum |
+  | Basic      | Standard | Premium |
   |------------------|------------------|------------------|
   | Face Detection        | Face Detection    | Face Detection |
   | Face Liveness Detection        | Face Liveness Detection    | Face Liveness Detection |
