@@ -42,7 +42,7 @@ Moreover, the demo can compute scores for different face attributes from a galle
 
 ### Google Play
 
-<a href="https://play.google.com/store/apps/details?id=com.kbyai.facerecognition" target="_blank">
+<a href="https://play.google.com/store/apps/details?id=com.kbyai.faceattribute" target="_blank">
   <img alt="" src="https://user-images.githubusercontent.com/125717930/230804673-17c99e7d-6a21-4a64-8b9e-a465142da148.png" height=80/>
 </a>
 
