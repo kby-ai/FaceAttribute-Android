@@ -175,7 +175,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
   The function returns a list of FaceBox objects.
 
-### - Create Templates
+#### - Create Templates
 
   The FaceSDK provides a function that can generate a template from a bitmap image. This template can then be used to verify the identity of the individual captured in the image.
 
@@ -187,7 +187,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
   The function returns a byte array, which contains the template that can be used for person verification.
 
-### - Calculation similiarity
+#### - Calculation similiarity
 
   The "similarityCalculation" function takes a byte array of two templates as a parameter. 
 
@@ -197,7 +197,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
   It returns the similarity value between the two templates, which can be used to determine the level of likeness between the two individuals.
 
-### - Yuv to Bitmap
+#### - Yuv to Bitmap
   The SDK provides a function called yuv2Bitmap, which converts a yuv frame to a bitmap. Since camera frames are typically in yuv format, this function is necessary to convert them to bitmaps. The usage of this function is as follows:
   ```
   Bitmap bitmap = FaceSDK.yuv2Bitmap(nv21, image.getWidth(), image.getHeight(), 7);
