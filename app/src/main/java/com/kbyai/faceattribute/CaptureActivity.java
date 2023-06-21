@@ -211,6 +211,7 @@ public class CaptureActivity extends AppCompatActivity implements CaptureView.Vi
 
         FaceDetectionParam param = new FaceDetectionParam();
         param.check_liveness = true;
+        param.check_liveness_level = SettingsActivity.getLivenessLevel(this);
 
         List<FaceBox> faceBoxes = FaceSDK.faceDetection(capturedBitmap, param);
         if(faceBoxes != null && faceBoxes.size() > 0) {

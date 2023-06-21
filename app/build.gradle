@@ -11,8 +11,8 @@ android {
         applicationId "com.kbyai.faceattribute"
         minSdk 24
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -51,6 +51,8 @@ dependencies {
     implementation 'androidx.camera:camera-view:1.0.0-alpha19'
 
     implementation project(path: ':libfacesdk')
+
+    implementation 'io.fotoapparat:fotoapparat:2.7.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

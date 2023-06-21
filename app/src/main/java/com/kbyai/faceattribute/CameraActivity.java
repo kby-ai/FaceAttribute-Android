@@ -201,12 +201,16 @@ public class CameraActivity extends AppCompatActivity {
             vBuffer.get(nv21, ySize, vSize);
             uBuffer.get(nv21, ySize + vSize, uSize);
 
-            Bitmap bitmap  = FaceSDK.yuv2Bitmap(nv21, image.getWidth(), image.getHeight(), 7);
+            int cameraMode = 7;
+            if(SettingsActivity.getCameraLens(context) == CameraSelector.LENS_FACING_BACK) {
+                cameraMode = 6;
+            }
+            Bitmap bitmap  = FaceSDK.yuv2Bitmap(nv21, image.getWidth(), image.getHeight(), cameraMode);
 
-            FaceDetectionParam param = new FaceDetectionParam();
-            param.check_liveness = true;
-
-            List<FaceBox> faceBoxes = FaceSDK.faceDetection(bitmap, param);
+            FaceDetectionParam faceDetectionParam = new FaceDetectionParam();
+            faceDetectionParam.check_liveness = true;
+            faceDetectionParam.check_liveness_level = SettingsActivity.getLivenessLevel(this);
+            List<FaceBox> faceBoxes = FaceSDK.faceDetection(bitmap, faceDetectionParam);
 
             runOnUiThread(new Runnable() {
                 @Override

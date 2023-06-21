@@ -14,6 +14,7 @@ class SettingsActivity : AppCompatActivity() {
         const val DEFAULT_CAMERA_LENS = "front"
         const val DEFAULT_LIVENESS_THRESHOLD = "0.7"
         const val DEFAULT_IDENTIFY_THRESHOLD = "0.8"
+        const val DEFAULT_LIVENESS_LEVEL = "0"
         const val DEFAULT_YAW_THRESHOLD = "10.0"
         const val DEFAULT_ROLL_THRESHOLD = "10.0"
         const val DEFAULT_PITCH_THRESHOLD = "10.0"
@@ -31,6 +32,28 @@ class SettingsActivity : AppCompatActivity() {
         fun getIdentifyThreshold(context: Context): Float {
             val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
             return sharedPreferences.getString("identify_threshold", SettingsActivity.DEFAULT_IDENTIFY_THRESHOLD)!!.toFloat()
+        }
+
+        @JvmStatic
+        fun getCameraLens(context: Context): Int {
+            val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+            val cameraLens = sharedPreferences.getString("camera_lens", SettingsActivity.DEFAULT_CAMERA_LENS)
+            if(cameraLens == "back") {
+                return CameraSelector.LENS_FACING_BACK
+            } else {
+                return CameraSelector.LENS_FACING_FRONT
+            }
+        }
+
+        @JvmStatic
+        fun getLivenessLevel(context: Context): Int {
+            val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+            val livenessLevel = sharedPreferences.getString("liveness_level", SettingsActivity.DEFAULT_LIVENESS_LEVEL)
+            if(livenessLevel == "0") {
+                return 0
+            } else {
+                return 1
+            }
         }
 
         @JvmStatic
@@ -68,17 +91,6 @@ class SettingsActivity : AppCompatActivity() {
             val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
             return sharedPreferences.getString("mouthopen_threshold", SettingsActivity.DEFAULT_MOUTHOPEN_THRESHOLD)!!.toFloat()
         }
-
-        @JvmStatic
-        fun getCameraLens(context: Context): Int {
-            val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-            val cameraLens = sharedPreferences.getString("camera_lens", SettingsActivity.DEFAULT_CAMERA_LENS)
-            if(cameraLens == "back") {
-                return CameraSelector.LENS_FACING_BACK
-            } else {
-                return CameraSelector.LENS_FACING_FRONT
-            }
-        }
     }
 
     lateinit var dbManager: DBManager
@@ -103,6 +115,7 @@ class SettingsActivity : AppCompatActivity() {
 
             val cameraLensPref = findPreference<ListPreference>("camera_lens")
             val livenessThresholdPref = findPreference<EditTextPreference>("liveness_threshold")
+            val livenessLevelPref = findPreference<ListPreference>("liveness_level")
             val identifyThresholdPref = findPreference<EditTextPreference>("identify_threshold")
             val yawThresholdPref = findPreference<EditTextPreference>("yaw_threshold")
             val rollThresholdPref = findPreference<EditTextPreference>("roll_threshold")
@@ -235,6 +248,7 @@ class SettingsActivity : AppCompatActivity() {
             buttonRestorePref?.setOnPreferenceClickListener {
 
                 cameraLensPref?.value = SettingsActivity.DEFAULT_CAMERA_LENS
+                livenessLevelPref?.value = SettingsActivity.DEFAULT_LIVENESS_LEVEL
                 livenessThresholdPref?.text = SettingsActivity.DEFAULT_LIVENESS_THRESHOLD
                 identifyThresholdPref?.text = SettingsActivity.DEFAULT_IDENTIFY_THRESHOLD
                 yawThresholdPref?.text = SettingsActivity.DEFAULT_YAW_THRESHOLD

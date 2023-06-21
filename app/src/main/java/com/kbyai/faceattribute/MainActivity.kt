@@ -136,6 +136,7 @@ class MainActivity : AppCompatActivity() {
 
                 val param = FaceDetectionParam()
                 param.check_liveness = true
+                param.check_liveness_level = SettingsActivity.getLivenessLevel(this)
                 param.check_eye_closeness = true
                 param.check_face_occlusion = true
                 param.check_mouth_opened = true

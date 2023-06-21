@@ -11,6 +11,7 @@
     <!-- Messages Preferences -->
     <string name="camera_lens">Camera lens</string>
     <string name="liveness_threshold">Liveness</string>
+    <string name="liveness_level">Liveness Level</string>
     <string name="identify_threshold">Identify</string>
     <string name="yaw_threshold">Yaw</string>
     <string name="roll_threshold">Roll</string>
