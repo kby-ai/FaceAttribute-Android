@@ -91,10 +91,11 @@ https://drive.google.com/file/d/14Gf4MlUZTCHlIJvEB7TemuqsDZR-vL17/view?usp=shari
 <p float="left">
   <img src="https://user-images.githubusercontent.com/125717930/235573436-6944cd3b-3b93-404d-b8c7-c02fc83d4bdc.png" width=240/>
   <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/515157bd-39ab-4a94-a54c-b2224d69b9fc" width=240/>
-  <img src="https://user-images.githubusercontent.com/125717930/235573974-413e09cd-d822-46bb-b0dc-cb0e95a5babc.png" width=240/>
+  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/b1f64dba-7b58-4385-939d-949fb4be4d66" width=240/>
 </p>
 
 ## SDK License
+
 
 The face recognition project relies on kby-ai's SDK, which requires a license for each application ID.
 
