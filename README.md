@@ -83,7 +83,7 @@ https://drive.google.com/file/d/14Gf4MlUZTCHlIJvEB7TemuqsDZR-vL17/view?usp=shari
 </p>
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/125717930/235572987-c8cdfa0a-34cc-4f29-8b1a-f58288c71eb0.png" width=240/>
+  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/0fc2851d-ccb3-4473-9748-83e025eb8409" width=240/>
   <img src="https://user-images.githubusercontent.com/125717930/235573098-8a15bf1a-3930-4b47-b79b-ffb63e9940f2.png" width=240/>
   <img src="https://user-images.githubusercontent.com/125717930/235573303-de38b7e1-e962-4057-886e-1dec5f75a5b5.png" width=240/>
 </p>
