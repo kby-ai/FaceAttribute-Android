@@ -77,7 +77,7 @@ https://drive.google.com/file/d/14Gf4MlUZTCHlIJvEB7TemuqsDZR-vL17/view?usp=shari
 ## Screenshots
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/125717930/235572284-dd230e36-ec37-42aa-9482-35c78a8a7ce7.png" width=240/>
+  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/8357b81f-757f-4300-a913-94e5530108b4" width=240/>
   <img src="https://user-images.githubusercontent.com/125717930/235572299-23989a6e-d6cc-41d3-b75c-a235018ee464.png" width=240/>
   <img src="https://user-images.githubusercontent.com/125717930/235572304-41714fd2-b117-4bcf-999d-32c6d5c1a0c5.png" width=240/>
 </p>
