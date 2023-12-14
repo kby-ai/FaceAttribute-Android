@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity() {
 
 
         var ret = FaceSDK.setActivation(
-            "fGMbqRWAN9PrnQBHd3JtdbNCKJ75REHRN4yenuntm9SghMVrQztH8IQIObnN3hJc6RitR139CwnP\n" +
-                    "P/hUVlINXCk48PkGrTJlNsFUm5ErOXL2QWw7IUzQow/DALUwvKOR4Qpz3i0lHKVlrFqMOKb4y3DH\n" +
-                    "Dhb/Fh6KLywr5aWy5Lwv/hutFqe6gao9xVqpbOLq2yP+OIjPpW0teMxEjSKGhuQftp7lV9tEnv9B\n" +
-                    "lAI75/ElCUYb6vxWCqZFSGLLiDuEyTbz7Npz1rhuQkwmotgLTYrij0zzIt79TccUve9lx2xl/fqS\n" +
-                    "y6YUynuO4VN/awOJQFMv4HpFVFVupmU/ezM7Tg=="
+            "S/oy5QsmyM60B7e1Fffrrt9m4rmaG1mYyLgs/07LCiCOfwjrD3MAziz2+N84pGz3fexy0Jp+k6Z1\n" +
+                    "mv6utAVtGtQfpecASlI6Fh54qdPFTPc8q4H/8dUHx9zhWmRLgflYfXF6fznDa4QZcbNmn2HsteCR\n" +
+                    "TpbcWsenj4qEDljT/+ObT4a1BLUdqsQqT5HrGnDvc5lbwJpBHXHbVzkw6R+2pM79AU2gwWg63Cq7\n" +
+                    "8ETIvpFIWd7SOPDxzm6i6ApBykevKvWf0yN2ah4nD/PU0hFpv3EH02hEpajyQegM+mECp+28+CLC\n" +
+                    "v2apWFkIOYNJYnwyBTybAL/RqUUaHdu7hMiQKQ=="
         )
 
         if (ret == FaceSDK.SDK_SUCCESS) {
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.buttonIdentify).setOnClickListener {
-            startActivity(Intent(this, CameraActivity::class.java))
+            startActivity(Intent(this, CameraActivityKt::class.java))
         }
 
         findViewById<Button>(R.id.buttonCapture).setOnClickListener {
