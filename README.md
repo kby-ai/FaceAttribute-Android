@@ -87,14 +87,12 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
 - The code below shows how to use the license: https://github.com/kby-ai/FaceAttribute-Android/blob/db2f1134af4ce947c318d5213f1b1e703c400dbf/app/src/main/java/com/kbyai/faceattribute/MainActivity.kt#L33-L43
 
-- To request a license, please contact us:
-  ```
-  Email: contact@kby-ai.com
-  Telegram: @kbyai
-  WhatsApp: +19092802609
-  Skype: live:.cid.66e2522354b1049b
-  Facebook: https://www.facebook.com/KBYAI
-  ```
+- To request a license, please contact us:</br>
+🧙`Email:` contact@kby-ai.com</br>
+🧙`Telegram:` [@kbyai](https://t.me/kbyai)</br>
+🧙`WhatsApp:` [+19092802609](https://wa.me/+19092802609)</br>
+🧙`Skype:` [live:.cid.66e2522354b1049b](https://join.skype.com/invite/OffY2r1NUFev)</br>
+🧙`Facebook:` https://www.facebook.com/KBYAI</br>
 
 ## About SDK
 
