@@ -100,12 +100,12 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 - Copy the SDK (libfacesdk folder) to the root folder of your project.
 
 - Add SDK to the project in settings.gradle
-  ```
+  ```bash
   include ':libfacesdk'
   ```
 
 - Add dependency to your build.gradle
-  ```
+  ```bash
   implementation project(path: ':libfacesdk')
   ```
 
@@ -114,7 +114,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 - Step One
 
   To begin, you need to activate the SDK using the license that you have received.
-  ```
+  ```kotlin
     FaceSDK.setActivation("...")
   ```
   If activation is successful, the return value will be SDK_SUCCESS. Otherwise, an error value will be returned.
@@ -122,7 +122,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 - Step Two
 
   After activation, call the SDK's initialization function.
-  ```
+  ```kotlin
   FaceSDK.init(getAssets());
   ```
   If initialization is successful, the return value will be SDK_SUCCESS. Otherwise, an error value will be returned.
@@ -169,7 +169,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
   The function can be used as follows:
 
-  ```
+  ```kotlin
   FaceSDK.faceDetection(bitmap, param)
   ```
 
@@ -181,7 +181,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
   The FaceSDK provides a function that can generate a template from a bitmap image. This template can then be used to verify the identity of the individual captured in the image.
 
-  ```
+  ```kotlin
   byte[] templates = FaceSDK.templateExtraction(bitmap, faceBox);
   ```
 
@@ -193,7 +193,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
   The "similarityCalculation" function takes a byte array of two templates as a parameter. 
 
-  ```
+  ```kotlin
   float similarity = FaceSDK.similarityCalucation(templates1, templates1);
   ```
 
@@ -201,7 +201,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
 #### - Yuv to Bitmap
   The SDK provides a function called yuv2Bitmap, which converts a yuv frame to a bitmap. Since camera frames are typically in yuv format, this function is necessary to convert them to bitmaps. The usage of this function is as follows:
-  ```
+  ```kotlin
   Bitmap bitmap = FaceSDK.yuv2Bitmap(nv21, image.getWidth(), image.getHeight(), 7);
   ```
   The first parameter is an nv21 byte array containing the yuv data. 
