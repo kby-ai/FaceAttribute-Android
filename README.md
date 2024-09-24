@@ -49,6 +49,7 @@ Moreover, the repository can compute scores for different face attributes from a
   | 6        | [Face Recognition - React-Native](https://github.com/kby-ai/FaceRecognition-React-Native)        | Standard SDK |
   | ➡️        | <b>[Face Attribute - Android](https://github.com/kby-ai/FaceAttribute-Android)</b>        | <b>Premium SDK</b> |
   | 8        | [Face Attribute - iOS](https://github.com/kby-ai/FaceAttribute-iOS)        | Premium SDK |
+  | 9        | [Face Attribute - Flutter](https://github.com/kby-ai/FaceAttribute-Flutter)        | Premium SDK |
 
  > To get Face SDK(server), please visit products [here](https://github.com/kby-ai/Product).<br/>
 
