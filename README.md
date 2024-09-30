@@ -13,17 +13,17 @@
 
 ## Overview
 
-This repository integrates several facial recognition technologies, including 3D passive face liveness detection, face recognition, automatic face capture, and analysis of various face attributes such as age, gender, face quality, facial occlusion, eye closure, and mouth opening.
+This repository integrates several `facial recognition` technologies, including `3D passive face liveness detection`, `face recognition`, `automatic face capture`, and analysis of various `face attributes` such as `age`, `gender`, `face quality`, `facial occlusion`, `eye closure`, and `mouth opening`.
 
-The system utilizes face liveness detection technology to generate a real-time liveness score based on a single image captured by the camera. 
+The system utilizes `face liveness detection` technology to generate a real-time liveness score based on a single image captured by the camera. 
 
-Additionally, the demo offers Face Recognition capabilities, enabling enrollment from a gallery and real-time identification of faces captured by the camera.
+Additionally, the demo offers `Face Recognition` capabilities, enabling enrollment from a gallery and real-time identification of faces captured by the camera.
 
-The repository also features an automatic face capture function that verifies various facial attributes, such as face quality, facial orientation (yaw, roll, pitch), facial occlusion (e.g., mask, sunglass, hand over face), eye closure, mouth opening, and the position of the face within the region of interest (ROI).
+The repository also features an automatic face capture function that verifies various `facial attributes`, such as `face quality`, `facial orientation` (`yaw`, `roll`, `pitch`), `facial occlusion` (e.g., mask, sunglass, hand over face), `eye closure`, `mouth opening`, and the position of the face within the `region of interest` (`ROI`).
 
-Moreover, the repository can compute scores for different face attributes from a gallery image, including liveness, face orientation (yaw, roll, pitch), face quality, luminance of the face, facial occlusion, eye closure, mouth opening, age, and gender.
+Moreover, the repository can compute scores for different face attributes from a gallery image, including `liveness`, `face orientation` (`yaw`, `roll`, `pitch`), `face quality`, `luminance of the face`, `facial occlusion`, `eye closure`, `mouth opening`, `age`, and `gender`.
 
-> In this repository, we integrated KBY-AI's Premium Face Mobile SDK into Android native platform.</br>
+> In this repository, we integrated `KBY-AI`'s `Premium Face Mobile SDK` into `Android` native platform.</br>
 ### ◾FaceSDK(Mobile) Details
 
   | Basic      | Standard | 🔽 Premium |
@@ -51,7 +51,7 @@ Moreover, the repository can compute scores for different face attributes from a
   | 8        | [Face Attribute - iOS](https://github.com/kby-ai/FaceAttribute-iOS)        | Premium SDK |
   | 9        | [Face Attribute - Flutter](https://github.com/kby-ai/FaceAttribute-Flutter)        | Premium SDK |
 
- > To get Face SDK(server), please visit products [here](https://github.com/kby-ai/Product).<br/>
+ > To get `Face SDK(server)`, please visit products [here](https://github.com/kby-ai/Product).<br/>
 
 ## Try the APK
 
@@ -84,7 +84,7 @@ Moreover, the repository can compute scores for different face attributes from a
 ## SDK License
 
 
-The face recognition project relies on kby-ai's SDK, which requires a license for each application ID.
+The face recognition project relies on `KBY-AI`'s SDK, which requires a license for each `application ID`.
 
 - The code below shows how to use the license: https://github.com/kby-ai/FaceAttribute-Android/blob/db2f1134af4ce947c318d5213f1b1e703c400dbf/app/src/main/java/com/kbyai/faceattribute/MainActivity.kt#L33-L43
 
@@ -97,14 +97,14 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 ## About SDK
 
 ### 1. Set up
-- Copy the SDK (libfacesdk folder) to the root folder of your project.
+- Copy the SDK (`libfacesdk` folder) to the `root` folder in your project.
 
-- Add SDK to the project in settings.gradle
+- Add SDK to the project in `settings.gradle`.
   ```bash
   include ':libfacesdk'
   ```
 
-- Add dependency to your build.gradle
+- Add dependency to your `build.gradle`.
   ```bash
   implementation project(path: ':libfacesdk')
   ```
@@ -113,19 +113,19 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
 - Step One
 
-  To begin, you need to activate the SDK using the license that you have received.
+  To begin, you need to activate the `SDK` using the license that you have received.
   ```kotlin
     FaceSDK.setActivation("...")
   ```
-  If activation is successful, the return value will be SDK_SUCCESS. Otherwise, an error value will be returned.
+  If activation is successful, the return value will be `SDK_SUCCESS`. Otherwise, an error value will be returned.
 
 - Step Two
 
-  After activation, call the SDK's initialization function.
+  After activation, call the `SDK`'s initialization function.
   ```kotlin
   FaceSDK.init(getAssets());
   ```
-  If initialization is successful, the return value will be SDK_SUCCESS. Otherwise, an error value will be returned.
+  If initialization is successful, the return value will be `SDK_SUCCESS`. Otherwise, an error value will be returned.
 
 ### 3. SDK Classes
 
@@ -152,7 +152,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 
   - FaceDetectionParam
   
-    This class serves as the input parameter for face detection, enabling various processing functionalities such as face liveness detection, eye closure checking, facial occlusion checking, mouth opening checking, and age and gender estimation.
+    This class serves as the input parameter for `face detection`, enabling various processing functionalities such as `face liveness detection`, `eye closure checking`, `facial occlusion checking`, `mouth opening checking`, and `age and gender estimation`.
 
     | Feature| Type | Name |
     |------------------|------------------|------------------|
@@ -165,7 +165,7 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
 ### 4. SDK APIs
 #### - Face Detection
 
-  The Face SDK provides a unified function for detecting faces, enabling multiple functionalities such as liveness detection, face orientation (yaw, roll, pitch), face quality, facial occlusion, eye closure, mouth opening, age, gender, and facial landmarks.
+  The `Face SDK` provides a unified function for detecting faces, enabling multiple functionalities such as `liveness detection`, `face orientation` (yaw, roll, pitch), `face quality`, `facial occlusion`, `eye closure`, `mouth opening`, `age`, `gender`, and `facial landmarks`.
 
   The function can be used as follows:
 
@@ -173,44 +173,44 @@ The face recognition project relies on kby-ai's SDK, which requires a license fo
   FaceSDK.faceDetection(bitmap, param)
   ```
 
-  This function requires two parameters: a Bitmap object and a FaceDetectionParam object that enables various processing functionalities.
+  This function requires two parameters: a `Bitmap` object and a `FaceDetectionParam` object that enables various processing functionalities.
 
-  The function returns a list of FaceBox objects.
+  The function returns a list of `FaceBox` objects.
 
 #### - Create Templates
 
-  The FaceSDK provides a function that can generate a template from a bitmap image. This template can then be used to verify the identity of the individual captured in the image.
+  The `FaceSDK` provides a function that can generate a `template` from a `Bitmap` image. This template can then be used to verify the identity of the individual image captured.
 
   ```kotlin
   byte[] templates = FaceSDK.templateExtraction(bitmap, faceBox);
   ```
 
-  The SDK's template extraction function takes two parameters: a bitmap object and an object of FaceBox. 
+  The `SDK`'s `template` extraction function takes two parameters: a `Bitmap` object and an object of `FaceBox`. 
 
-  The function returns a byte array, which contains the template that can be used for person verification.
+  The function returns a byte array, which contains the `template` that can be used for person verification.
 
 #### - Calculation similiarity
 
-  The "similarityCalculation" function takes a byte array of two templates as a parameter. 
+  The `similarityCalculation` function takes a byte array of two `template`s as a parameter. 
 
   ```kotlin
   float similarity = FaceSDK.similarityCalucation(templates1, templates1);
   ```
 
-  It returns the similarity value between the two templates, which can be used to determine the level of likeness between the two individuals.
+  It returns the similarity value between the two `template`s, which can be used to determine the level of likeness between the two individuals.
 
 #### - Yuv to Bitmap
-  The SDK provides a function called yuv2Bitmap, which converts a yuv frame to a bitmap. Since camera frames are typically in yuv format, this function is necessary to convert them to bitmaps. The usage of this function is as follows:
+  The `SDK` provides a function called `yuv2Bitmap`, which converts a `yuv` frame to a `Bitmap`. Since camera frames are typically in `yuv` format, this function is necessary to convert them to `Bitmap`. The usage of this function is as follows:
   ```kotlin
   Bitmap bitmap = FaceSDK.yuv2Bitmap(nv21, image.getWidth(), image.getHeight(), 7);
   ```
-  The first parameter is an nv21 byte array containing the yuv data. 
+  The first parameter is an `nv21` byte array containing the `yuv` data. 
 
-  The second parameter is the width of the yuv frame, and the third parameter is its height. 
+  The second parameter is the width of the `yuv` frame, and the third parameter is its height. 
 
-  The fourth parameter is the conversion mode, which is determined by the camera orientation.
+  The fourth parameter is the `conversion mode`, which is determined by the camera orientation.
 
-  To determine the appropriate conversion mode, the following method can be used:
+  To determine the appropriate `conversion mode`, the following method can be used:
   ```kotlin
   1        2       3      4         5            6           7          8
 
