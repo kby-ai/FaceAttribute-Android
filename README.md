@@ -222,4 +222,3 @@ The face recognition project relies on `KBY-AI`'s SDK, which requires a license 
   88          88  888888  888888
   ```
 
-[![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fkby-ai%2FFaceAttribute-Android&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fkby-ai%2FFaceAttribute-Android)
