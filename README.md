@@ -68,7 +68,7 @@ Moreover, the repository can compute scores for different face attributes from a
 
 ## Performance Video
 
-You can visit our YouTube video [here](https://www.youtube.com/watch?v=-WiAethTacc) to see how well our demo app works.</br></br>
+You can visit our YouTube video [here](https://www.youtube.com/watch?v=-WiAethTacc) to see how well our demo app works.</br>
 [![Face Recognition Android](https://img.youtube.com/vi/-WiAethTacc/0.jpg)](https://www.youtube.com/watch?v=-WiAethTacc)
 
 ## Screenshots
