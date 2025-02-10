@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity() {
 
 
         var ret = FaceSDK.setActivation(
-            "hyiz6zr3/pnQnYiO/mQKHnbKI9AMik/C3Q5seH1SBcvEqwyEBxm6U6cDTOk+wtiYhUeLK9cSBP/R\n" +
-                    "d5FjSzqMscKRy33Gn3UNOut2+73UJJtKse+twz/XTxB179any1/LekW5kdYtBo++eHU2TzibhP0O\n" +
-                    "e3pjoIq+OGQHWl1OQ1n2riqTJmFrLaT2O15Xvb6SMzuXsjV9WCYGytdjpwmaSzv14s+oa0SaBqZL\n" +
-                    "b+EFjECi5DvP9ZEWaflx59crujXLqRGOoHHRS5WgWNFhr298vjEIkQ7leh/QNbXqiiREjRTDnP9J\n" +
-                    "eJvldGwHOH+63tP/J2cKcxG1nXJbSg/V4g7LsQ=="
+            "U6RUIXFs/oLF1eKHoEFd+aX3QgjBbJ74wUCpAJdx+mlLqyWhmmvgmyNYMLbr+MGgbxWH6ciH984o\n" +
+                    "a6V6+wEWPCRP1BWDBaCFWI8chEZvrVXXZMN460qRVZ7DVeSkIKhxaAPKhO5UkOJPSc0kjleHS7Jb\n" +
+                    "+CG3xKE8w0RPz6Lcf9ci0+6kGQecBJDrJfJ+6qbLghXANtx+tgH0PLLToHsmNAaoGrlpaMHuplo3\n" +
+                    "hw1AvJB4Gkz1MErEfZlvpRMa7q2KbikGhXenVrllRxRD8n3Ohx7v+dIAQ+ahQVsUefs4NTEtaanG\n" +
+                    "C/1bHh4wUyCLx9kItcu5kThDLmbr4nBVLCys9A=="
         )
 
         if (ret == FaceSDK.SDK_SUCCESS) {
