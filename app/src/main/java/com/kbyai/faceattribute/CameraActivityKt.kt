@@ -4,7 +4,9 @@ import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.util.Log
 import android.util.Size
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
@@ -18,6 +20,9 @@ import io.fotoapparat.preview.Frame
 import io.fotoapparat.preview.FrameProcessor
 import io.fotoapparat.selector.front
 import io.fotoapparat.view.CameraView
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
 
 class CameraActivityKt : AppCompatActivity() {
 
@@ -31,6 +36,8 @@ class CameraActivityKt : AppCompatActivity() {
     private lateinit var context: Context
 
     private var recognized = false
+    private var hasSavedBitmap = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,6 +94,21 @@ class CameraActivityKt : AppCompatActivity() {
         }
     }
 
+    private fun saveBitmapToFile(bitmap: Bitmap, context: Context) {
+        val filename = "face_frame_${System.currentTimeMillis()}.png"
+        val file = File(context.getExternalFilesDir(null), filename)
+
+        try {
+            val outputStream = FileOutputStream(file)
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+            outputStream.flush()
+            outputStream.close()
+            Log.d("FaceFrameProcessor", "Saved bitmap to: ${file.absolutePath}")
+        } catch (e: IOException) {
+            Log.e("FaceFrameProcessor", "Failed to save bitmap: ${e.message}", e)
+        }
+    }
+
     inner class FaceFrameProcessor : FrameProcessor {
 
         override fun process(frame: Frame) {
@@ -95,12 +117,18 @@ class CameraActivityKt : AppCompatActivity() {
                 return
             }
 
-            var cameraMode = 7
+            var cameraMode = 7  // 7: portrait mode, 2: landscape mode
             if (SettingsActivity.getCameraLens(context) == CameraSelector.LENS_FACING_BACK) {
                 cameraMode = 6
             }
 
             val bitmap = FaceSDK.yuv2Bitmap(frame.image, frame.size.width, frame.size.height, cameraMode)
+// For testing, the below line saves one frame to mobile device.
+//            if (!hasSavedBitmap) {
+//                saveBitmapToFile(bitmap, context)
+//                hasSavedBitmap = true
+//            }
+
 
             val faceDetectionParam = FaceDetectionParam()
             faceDetectionParam.check_liveness = true
@@ -108,7 +136,8 @@ class CameraActivityKt : AppCompatActivity() {
             val faceBoxes = FaceSDK.faceDetection(bitmap, faceDetectionParam)
 
             runOnUiThread {
-                faceView.setFrameSize(Size(bitmap.width, bitmap.height))
+//                faceView.setFrameSize(Size(bitmap.height, bitmap.width)) // landscape mode
+                faceView.setFrameSize(Size(bitmap.width, bitmap.height)) // portrait mode
                 faceView.setFaceBoxes(faceBoxes)
             }
 

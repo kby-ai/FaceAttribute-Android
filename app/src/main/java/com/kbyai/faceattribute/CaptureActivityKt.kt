@@ -266,7 +266,7 @@ class CaptureActivityKt : AppCompatActivity(), CaptureView.ViewModeChanged {
             faceDetectionParam.check_mouth_opened = true
             val faceBoxes = FaceSDK.faceDetection(bitmap, faceDetectionParam)
 
-            val faceCaptureState = CaptureActivity.checkFace(faceBoxes, context)
+            val faceCaptureState = checkFace(faceBoxes, context)
 
             if (captureView.viewMode == CaptureView.VIEW_MODE.REPEAT_NO_FACE_PREPARE) {
                 if (faceCaptureState.compareTo(FACE_CAPTURE_STATE.NO_FACE) > 0) {

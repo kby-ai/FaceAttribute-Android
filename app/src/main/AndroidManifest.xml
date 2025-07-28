@@ -39,6 +39,7 @@
             android:name=".CameraActivityKt"
             android:exported="false"
             android:screenOrientation="portrait" />
+<!--            android:screenOrientation="landscape" />-->
         <activity
             android:name=".CaptureActivity"
             android:exported="false"
