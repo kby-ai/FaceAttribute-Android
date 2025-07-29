@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.util.Log
 import android.util.Size
 import android.view.View
 import android.widget.TextView
@@ -193,7 +194,8 @@ class CaptureActivityKt : AppCompatActivity(), CaptureView.ViewModeChanged {
 
         val sizeRate = 0.30f
         val interRate = 0.03f
-        val frameSize = Size(CaptureActivity.PREVIEW_WIDTH, CaptureActivity.PREVIEW_HEIGHT)
+        val frameSize = Size(CaptureActivity.PREVIEW_WIDTH, CaptureActivity.PREVIEW_HEIGHT) // portrait mode
+//        val frameSize = Size(CaptureActivity.PREVIEW_HEIGHT, CaptureActivity.PREVIEW_WIDTH) // landscape mode
         val roiRect = CaptureView.getROIRect(frameSize)
         val centerY = ((faceBox.y2 + faceBox.y1) / 2).toFloat()
         val topY = centerY - (faceBox.y2 - faceBox.y1) * 2 / 3
@@ -253,7 +255,7 @@ class CaptureActivityKt : AppCompatActivity(), CaptureView.ViewModeChanged {
                 return
             }
 
-            var cameraMode = 7
+            var cameraMode = 7 // portrait: 7, landscape: 2 or 4
             if (SettingsActivity.getCameraLens(context) == CameraSelector.LENS_FACING_BACK) {
                 cameraMode = 6
             }

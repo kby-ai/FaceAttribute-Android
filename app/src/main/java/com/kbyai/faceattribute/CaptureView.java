@@ -554,6 +554,7 @@ public class CaptureView extends View implements Animator.AnimatorListener, Valu
 
     public static RectF getROIRect(Size frameSize) {
         int margin = frameSize.getWidth() / 6;
+//        int margin = frameSize.getWidth() / 4; // landscape
         int rectHeight = (frameSize.getWidth() - 2 * margin) * 6 / 5;
 
         RectF roiRect = new RectF(margin,  (frameSize.getHeight() - rectHeight) / 2,
@@ -563,6 +564,7 @@ public class CaptureView extends View implements Animator.AnimatorListener, Valu
 
     public static RectF getROIRect1(Size frameSize) {
         int margin = frameSize.getWidth() / 6;
+//        int margin = frameSize.getWidth() / 4; // landscape
         int rectHeight = (frameSize.getWidth() - 2 * margin);
 
         RectF roiRect = new RectF(margin,  (frameSize.getHeight() - rectHeight) / 2,
