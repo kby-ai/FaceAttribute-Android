@@ -305,15 +305,16 @@ public class CaptureView extends View implements Animator.AnimatorListener, Valu
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        int canvasWidth = canvas.getWidth();
+        int canvasHeight = canvas.getHeight();
         if(scrimInited == false) {
             scrimInited = true;
             scrimPaint.setShader(
                     new LinearGradient(
                             0,
                             0,
-                            canvas.getWidth(),
-                            canvas.getHeight(),
+                            canvasWidth,
+                            canvasHeight,
                             context.getColor(R.color.md_theme_dark_surface),
                             context.getColor(R.color.md_theme_dark_scrim),
                             Shader.TileMode.CLAMP));
@@ -330,19 +331,19 @@ public class CaptureView extends View implements Animator.AnimatorListener, Valu
             } else {
                 scrimPaint.setAlpha(255);
             }
-            canvas.drawRect(0, 0, canvas.getWidth(), canvas.getHeight(), scrimPaint);
+            canvas.drawRect(0, 0, canvasWidth, canvasHeight, scrimPaint);
         }
 
         RectF roiRect = CaptureView.getROIRect1(frameSize);
 
-        float ratioView = canvas.getWidth() / (float)canvas.getHeight();
+        float ratioView = canvasWidth / (float)canvasHeight;
         float ratioFrame = frameSize.getWidth() / (float)frameSize.getHeight();
         RectF roiViewRect = new RectF();
 
         if(ratioView < ratioFrame) {
-            float dx = ((canvas.getHeight() * ratioFrame) - canvas.getWidth()) / 2;
+            float dx = ((canvasHeight * ratioFrame) - canvasWidth) / 2;
             float dy = 0f;
-            float ratio = canvas.getHeight() / (float)frameSize.getHeight();
+            float ratio = canvasHeight / (float)frameSize.getHeight();
 
             float x1 = roiRect.left * ratio - dx;
             float y1 = roiRect.top * ratio - dy;
@@ -352,8 +353,8 @@ public class CaptureView extends View implements Animator.AnimatorListener, Valu
             roiViewRect = new RectF(x1, y1, x2, y2);
         } else {
             float dx = 0;
-            float dy = ((canvas.getWidth() / ratioFrame) - canvas.getHeight()) / 2;
-            float ratio = canvas.getHeight() / (float)frameSize.getHeight();
+            float dy = ((canvasWidth / ratioFrame) - canvasHeight) / 2;
+            float ratio = canvasHeight / (float)frameSize.getHeight();
 
             float x1 = roiRect.left * ratio - dx;
             float y1 = roiRect.top * ratio - dy;
