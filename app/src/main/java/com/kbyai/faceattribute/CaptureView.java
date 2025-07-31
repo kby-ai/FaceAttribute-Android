@@ -535,7 +535,7 @@ public class CaptureView extends View implements Animator.AnimatorListener, Valu
             paint1.setStrokeWidth(15);
             paint1.setAntiAlias(true);
 
-            canvas.translate(0, (getWidth() / 5 - roiViewRect.top) * animateValue);
+            canvas.translate(0, (getWidth() / 5 - roiViewRect.top) * animateValue); // disable this line in case of landscape mode to avoid roi downward
             canvas.drawBitmap(roiBitmap, new Rect(0, 0, roiBitmap.getWidth(), roiBitmap.getHeight()), borderRect, null);
             canvas.drawCircle(borderRect.centerX(), borderRect.centerY(), borderRect.width() / 2, paint1);
         }
