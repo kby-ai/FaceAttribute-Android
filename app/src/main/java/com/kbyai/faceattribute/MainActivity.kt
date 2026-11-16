@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
         textWarning = findViewById<TextView>(R.id.textWarning)
 
         var ret = FaceSDK.setActivation(
-            "O53KHkQSjuUCMO1oQLAX2Rv48kW8jLaoySY5lAI23xNCTu3x56NV/UsEILK/Zc7oa6QNHSTUNHyZy" + 
-                    "aLitHh5pWXWekmStNCNoEkN9W6DuqmA7I5zRH9KfJ7T/zAbMnKNxYqCx4awb7Wewq3HsnNu7gVA4D0X" + 
-                    "IiLOnQJFMKlnHMRnfb1jfnEGmwsQDKkqQffqR6E3LrewUrsUfH0QAwk7s3Oj8uprb8IsGG9lOCmeg4U" + 
-                    "9hplX81ZqtizHkUnc0HPxA4spXlaPCPuLhmuWKT5SooFV3sfDW86nZF2RZbKrIhYStSHRSQJyGJawY8" + 
-                    "EFPNDGQqLCboWEOIGycfKrbAg2+Q=="
+            "cfdY3w5z3eiXLrCwqaMOu+eSdQy0DjqsNdsCSmJHrOfdiwbIz1St1UkrPGVbD95arIhp5zUQ/UIN\n" +
+                    "4kg4skquvYhj2Bbvt6Aa8Ru0gxoD7IAisA1cdel4SWwg2a1DNFc2NwJZu4SFRac4K527u8NZkNOm\n" +
+                    "U/1e1Rzw1LG15SKgUMpUiAuwIbM3CA3BWX3X9eV5GJQUtfCIcxZOy8uwub6vO5Axr8c4lUsWRo8v\n" +
+                    "PfNtVl3uQqaFfLZW42YfVucst8N9UMQwfQCaHSTg6ab7siinNe1lh+id1+ZZek6wcyb/XJjNAHmb\n" +
+                    "lJh4hTVXdB6DJAlJPs+1Lmm7yRkOo1LVTE9sVw=="
         )
 
         if (ret == FaceSDK.SDK_SUCCESS) {
